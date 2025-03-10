@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Castle map</title>
+        <meta charset="utf-8">
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <style>
+            .marker {
+                width: 14px;
+                height: 14px;
+                border: 2px solid white;
+                border-radius: 10px;
+                background-color: red;
+            }
+            .mapboxgl-popup {
+                max-width: 200px;
+            }
+            .mapboxgl-popup-content {
+                text-align: center;
+                font-family: 'Open sans', sans-serif;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 10px;
+                color: black;
+            }
+            .map-overlay {
+                font: 12px/20px Arial, Helvetica, sans-serif;
+                position: absolute;
+                width: 250px;
+                height: 200px;
+                top: 0;
+                left: 0;
+                padding: 10px;
+                z-index: 1;
+            }
+            .map-overlay .map-overlay-inner {
+                background-color: rgba(61, 61, 61, 0.5);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                height: 200px;
+                border-radius: 10px;
+                margin-bottom: 5px;
+                
+            }
+            .map-overlay-inner fieldset {
+                border: none;
+                padding: 0;
+                margin: 0 0 10px;
+            }
+            .map-overlay-inner fieldset:last-child {
+                margin: 0;
+            }
+            .map-overlay-inner select {
+                width: 80%;
+                position: relative;
+                top: 17px;
+                left: 10%;
+                
+            }
+            .map-overlay-inner label {
+                display: block;
+                font-weight: bold;
+                margin: 0 0 5px;
+                color: white;
+                position: relative;
+                top: 20px;
+                left: 10%;
+            }
+            .map-overlay-inner input {
+                width: 80%;
+                height: 25px;
+                position: relative;
+                top: 10px;
+                left: 10%;
+                border: none;
+                border-radius: 20px;
+                outline: none;
+            }
+        </style>
+        <link src="./marker.html" id="marker">
+        <div id="map">
+            <div class="map-overlay" top>
+                <div class="map-overlay-inner">
+                    <fieldset>
+                        <input type="text" placeholder=" Search" name="search" id="search">
+                        <label>Pays</label>
+                        <select name="pays" id="pays">
+                            <option value="france">france</option>
+                        </select>
+                        <label id="r_cas" name="r_cas"></label>
+                    </fieldset>
+                    <div class="more"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+        <script type="module">
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmFpdG92aW4iLCJhIjoiY2w2YjQyZzZxMWEyMzNpbzE4ZDBtMG45biJ9.bRYg8AO7oKpfwSG_WGdwwA'
+
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/raitovin/cl6b4gxh5000114nxo6plv0dw',
+                zoom: 4,
+                center: [5,45]
+            })
+
+            import geojson from './geojson.json' with {type: 'json'}
+            /***
+            const geojson = 
+                {
+                    type: "FeatureCollection",
+                    features: [{
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [2.130,48.801]
+                        },
+                        properties: {
+                            title: "Chateau de versaille",
+                            description: "A simple marker test"
+                        }},
+                        {
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [2.353, 43.212]
+                        },
+                        properties: {
+                            title: "Chateau de carcassonne",
+                            description: "un chateau"
+                        }},
+                        {
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [4.919, 46.159]
+                        },
+                        properties: {
+                            title: "Vieux Bourg de l'Abergement-Clémenciat",
+                            description: "un chateau"
+                        }},
+                        {
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [5.4102778, 45.9736111]
+                        },
+                        properties: {
+                            title: "Chateau des Allymes",
+                            description: "un chateau"
+                        }},
+                        {
+                        type: "Feature",
+                        geometry: {
+                            type: "Point",
+                            coordinates: [4.903, 45.9972]
+                        },
+                        properties: {
+                            title: "Château d'Ambérieux-en-Dombes",
+                            description: "un chateau"
+                        }
+                    }]
+                }
+
+                ***/
+            
+            var a = 0
+            
+
+            for (const feature of geojson.features){
+                a = a + 1
+                const el = document.createElement('div')
+                el.className = 'marker'
+
+                new mapboxgl.Marker(el)
+                    .setLngLat(feature.geometry.coordinates)
+                    .setPopup(
+                        new mapboxgl.Popup({offset: 8})
+                            .setHTML(
+                                `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                            )
+                    ).addTo(map)
+                    
+                    //document.getElementById("r_cas").value = "Recensed castle" + a
+            }
+            document.getElementById("r_cas").innerHTML = a + " recensed castle"
+
+
+            
+            
+            
+
+
+
+            /***
+            var html = '<div class="marker-popup">This is france</div>'
+                        
+
+            var CustomPopup = new mapboxgl.Popup({
+                anchor: 'bottom',
+                offset: {'bottom': [0,-10]},
+                closeOnCLick: false
+            }).setHTML(html)
+
+            var popup = new mapboxgl.Popup({offset: 25})
+                .setText('That is France dude')
+            
+            var el = document.createElement('div')
+            el.innerHTML = "Marker1"
+            el.id = 'marker'
+
+            new mapboxgl.Marker(el, {offset:[-25,-25]})
+                .setLngLat([5,45])
+                .setPopup(CustomPopup)
+                .addTo(map)
+            ***/
+           
+        </script>
+    </body>
+</html>
