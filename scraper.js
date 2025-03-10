@@ -168,7 +168,7 @@ async function scrapeTableData(url) {
         //console.log(data)
         // Enregistrer les données dans un fichier JSON
         
-        fs.writeFileSync('geojson.json', JSON.stringify(geoJson, null, 2));
+        fs.writeFileSync('geojson_.json', JSON.stringify(geoJson, null, 2));
         console.log('Les données ont été enregistrées avec succès dans data.json.');
     } catch (error) {
         console.error('Une erreur s\'est produite :', error);
