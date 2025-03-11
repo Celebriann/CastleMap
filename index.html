@@ -90,6 +90,18 @@
                 border-radius: 20px;
                 outline: none;
             }
+            #link {
+                position: relative;
+                top: 10px;
+                left: 10%;
+                color: white;
+            }
+            #bug {
+                position: relative;
+                top: 30px;
+                left: -29%;
+                color: white;
+            }
         </style>
         <link src="./marker.html" id="marker">
         <div id="map">
@@ -102,6 +114,8 @@
                             <option value="france">france</option>
                         </select>
                         <label id="r_cas" name="r_cas"></label>
+                        <a href="https://celebrian.notion.site/1b3101dabb1c80e4b639d7a7c59c22a2?pvs=105" id="link">Une suggestion ? </a>
+                        <a href="https://celebrian.notion.site/1b3101dabb1c803db938e80e0543d0ce?pvs=105" id="bug">Signaler un bug</a>
                     </fieldset>
                     <div class="more"></div>
                 </div>
@@ -121,65 +135,7 @@
             })
 
             import geojson from './geojson.json' with {type: 'json'}
-            /***
-            const geojson = 
-                {
-                    type: "FeatureCollection",
-                    features: [{
-                        type: "Feature",
-                        geometry: {
-                            type: "Point",
-                            coordinates: [2.130,48.801]
-                        },
-                        properties: {
-                            title: "Chateau de versaille",
-                            description: "A simple marker test"
-                        }},
-                        {
-                        type: "Feature",
-                        geometry: {
-                            type: "Point",
-                            coordinates: [2.353, 43.212]
-                        },
-                        properties: {
-                            title: "Chateau de carcassonne",
-                            description: "un chateau"
-                        }},
-                        {
-                        type: "Feature",
-                        geometry: {
-                            type: "Point",
-                            coordinates: [4.919, 46.159]
-                        },
-                        properties: {
-                            title: "Vieux Bourg de l'Abergement-Clémenciat",
-                            description: "un chateau"
-                        }},
-                        {
-                        type: "Feature",
-                        geometry: {
-                            type: "Point",
-                            coordinates: [5.4102778, 45.9736111]
-                        },
-                        properties: {
-                            title: "Chateau des Allymes",
-                            description: "un chateau"
-                        }},
-                        {
-                        type: "Feature",
-                        geometry: {
-                            type: "Point",
-                            coordinates: [4.903, 45.9972]
-                        },
-                        properties: {
-                            title: "Château d'Ambérieux-en-Dombes",
-                            description: "un chateau"
-                        }
-                    }]
-                }
 
-                ***/
-            
             var a = 0
             
 
