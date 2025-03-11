@@ -3114,27 +3114,13 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          -2.2269444444444444,
+          48.4397222
         ]
       },
       "properties": {
         "title": "Manoir des Fossés",
         "description": "Description du Manoir des Fossés..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château François Ier",
-        "description": "Description du Château François Ier..."
       }
     },
     {
@@ -3156,8 +3142,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.4358333333333335,
+          49.2044444
         ]
       },
       "properties": {
@@ -3170,8 +3156,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.6230555555555557,
+          49.8961111
         ]
       },
       "properties": {
@@ -3184,8 +3170,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.5377777777777775,
+          49.3008333
         ]
       },
       "properties": {
@@ -3198,8 +3184,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2472222222222222,
+          49.2575
         ]
       },
       "properties": {
@@ -3212,8 +3198,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2455555555555557,
+          49.2563889
         ]
       },
       "properties": {
@@ -3226,8 +3212,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.8175,
+          49.5844444
         ]
       },
       "properties": {
@@ -3240,8 +3226,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.7736111111111112,
+          49.8002778
         ]
       },
       "properties": {
@@ -3254,8 +3240,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2247222222222223,
+          49.0613889
         ]
       },
       "properties": {
@@ -3268,8 +3254,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2241666666666666,
+          49.1797222
         ]
       },
       "properties": {
@@ -3282,8 +3268,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.7980555555555555,
+          49.5294444
         ]
       },
       "properties": {
@@ -3296,8 +3282,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.0994444444444444,
+          49.3008333
         ]
       },
       "properties": {
@@ -3316,7 +3302,8 @@
       },
       "properties": {
         "title": "Château de Missy-lès-Pierrepont",
-        "description": "Description du Château de Missy-lès-Pierrepont..."
+        "description": "Description du Château de Missy-lès-Pierrepont...",
+        "note": "No data on wikipedia"
       }
     },
     {
@@ -3324,8 +3311,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.6397222222222223,
+          49.2822222
         ]
       },
       "properties": {
@@ -3338,8 +3325,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.1441666666666666,
+          49.3097222
         ]
       },
       "properties": {
@@ -3352,8 +3339,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.127222222222222,
+          49.3888889
         ]
       },
       "properties": {
@@ -3366,8 +3353,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.4333333333333336,
+          49.1183333
         ]
       },
       "properties": {
@@ -3386,7 +3373,8 @@
       },
       "properties": {
         "title": "Château de la Muette",
-        "description": "Description du Château de la Muette..."
+        "description": "Description du Château de la Muette...",
+        "note": "No data on wikipedia"
       }
     },
     {
@@ -3408,8 +3396,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.5691666666666664,
+          49.2038889
         ]
       },
       "properties": {
@@ -3422,8 +3410,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.0747222222222224,
+          49.25
         ]
       },
       "properties": {
@@ -3436,8 +3424,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.7758333333333334,
+          50.0055556
         ]
       },
       "properties": {
@@ -3450,8 +3438,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.1375,
+          49.22
         ]
       },
       "properties": {
