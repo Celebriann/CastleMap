@@ -342,20 +342,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château du Breuil-de-Monthieux",
-        "description": "Description du Château du Breuil-de-Monthieux..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           4.736111111111112,
           45.95166666666667
         ]
@@ -888,20 +874,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de Florimont",
-        "description": "Description du Château de Florimont..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.258055555555556,
           46.183611111111105
         ]
@@ -1378,20 +1350,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de Montgriffon",
-        "description": "Description du Château de Montgriffon..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           5.094444444444444,
           45.83388888888889
         ]
@@ -1819,20 +1777,6 @@
       "properties": {
         "title": "Château de Romans",
         "description": "Description du Château de Romans..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château du Roquet",
-        "description": "Description du Château du Roquet..."
       }
     },
     {
@@ -3030,20 +2974,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de l'Étang",
-        "description": "Description du Château de l'Étang..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           3.366388888888889,
           49.6636111
         ]
@@ -3051,48 +2981,6 @@
       "properties": {
         "title": "Château de La Fère",
         "description": "Description du Château de La Fère..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de Fère-en-Tardenois",
-        "description": "Description du Château de Fère-en-Tardenois..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de La Ferté-Milon",
-        "description": "Description du Château de La Ferté-Milon..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de Festieux",
-        "description": "Description du Château de Festieux..."
       }
     },
     {
@@ -3296,21 +3184,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de Missy-lès-Pierrepont",
-        "description": "Description du Château de Missy-lès-Pierrepont...",
-        "note": "No data on wikipedia"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           3.6397222222222223,
           49.2822222
         ]
@@ -3360,21 +3233,6 @@
       "properties": {
         "title": "Château de Moucheton",
         "description": "Description du Château de Moucheton..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de la Muette",
-        "description": "Description du Château de la Muette...",
-        "note": "No data on wikipedia"
       }
     },
     {
@@ -3466,8 +3324,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.548611111111111,
+          49.7855556
         ]
       },
       "properties": {
@@ -3494,8 +3352,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.227222222222222,
+          49.375
         ]
       },
       "properties": {
@@ -3508,22 +3366,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de la Pilule",
-        "description": "Description du Château de la Pilule..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
+          3.8105555555555553,
+          49.9241667
         ]
       },
       "properties": {
@@ -3536,8 +3380,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2841666666666667,
+          49.4997222
         ]
       },
       "properties": {
@@ -3550,8 +3394,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.6258333333333335,
+          49.5016667
         ]
       },
       "properties": {
@@ -3564,8 +3408,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.6766666666666663,
+          49.8561111
         ]
       },
       "properties": {
@@ -3578,8 +3422,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.1469444444444443,
+          49.5758333
         ]
       },
       "properties": {
@@ -3592,8 +3436,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.5530555555555554,
+          49.3066667
         ]
       },
       "properties": {
@@ -3606,8 +3450,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.6997222222222224,
+          49.3658333
         ]
       },
       "properties": {
@@ -3620,8 +3464,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.638611111111111,
+          49.2016667
         ]
       },
       "properties": {
@@ -3634,8 +3478,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.479722222222222,
+          49.2141667
         ]
       },
       "properties": {
@@ -3648,8 +3492,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.36,
+          49.335
         ]
       },
       "properties": {
@@ -3662,22 +3506,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
-        ]
-      },
-      "properties": {
-        "title": "Château de Sons-et-Ronchères",
-        "description": "Description du Château de Sons-et-Ronchères..."
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          null,
-          null
+          3.606388888888889,
+          49.4066667
         ]
       },
       "properties": {
@@ -3690,8 +3520,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.1827777777777775,
+          49.9008333
         ]
       },
       "properties": {
@@ -3732,8 +3562,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.1141666666666667,
+          49.4058333
         ]
       },
       "properties": {
@@ -3746,8 +3576,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.3975,
+          48.8952778
         ]
       },
       "properties": {
@@ -3760,8 +3590,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.283611111111111,
+          49.2927778
         ]
       },
       "properties": {
@@ -3774,8 +3604,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.640277777777778,
+          49.2927778
         ]
       },
       "properties": {
@@ -3788,8 +3618,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.3819444444444446,
+          49.3030556
         ]
       },
       "properties": {
@@ -3802,8 +3632,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.352777777777778,
+          49.3811111
         ]
       },
       "properties": {
@@ -3830,8 +3660,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2605555555555554,
+          49.2666667
         ]
       },
       "properties": {
@@ -3844,8 +3674,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          null,
-          null
+          3.2666666666666666,
+          48.9952778
         ]
       },
       "properties": {
