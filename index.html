@@ -127,24 +127,26 @@
 
             alert("La carte est en cours de développement, par conséquent il manque une grande partie des données et des options")
 
-            const map = new mapboxgl.Map({
+            const map = new mapboxgl.Map({ //affiche la map depuis mapbox
                 container: 'map',
                 style: 'mapbox://styles/raitovin/cl6b4gxh5000114nxo6plv0dw',
                 zoom: 4,
                 center: [5,45]
             })
+            map.addControl(new mapboxgl.GeolocateControl()) //localiser l'utilisateur
 
-            import geojson from './geojson.json' with {type: 'json'}
+            import geojson from './geojson.json' with {type: 'json'} //import les données des chateaux (coordonnées, nom, description)
 
             var a = 0
             
 
             for (const feature of geojson.features){
                 a = a + 1
-                const el = document.createElement('div')
+                const el = document.createElement('div') //créer les marqueurs
                 el.className = 'marker'
+                //el.tag = feature.properties.title
 
-                new mapboxgl.Marker(el)
+                const marker = new mapboxgl.Marker(el)
                     .setLngLat(feature.geometry.coordinates)
                     .setPopup(
                         new mapboxgl.Popup({offset: 8})
@@ -153,39 +155,32 @@
                             )
                     ).addTo(map)
                     
-                    document.getElementById("r_cas").value = "Recensed castle" + a
+                    
+
+                    document.getElementById("r_cas").value = "Chateaux recencés" + a
             }
-            document.getElementById("r_cas").innerHTML = a + " recensed castle"
+            //fonction rechercher
+            const searchbar = document.getElementById("search")
+                    searchbar.addEventListener("keydown", (event) => {
+                        if (event.key === 'Enter') {
+                            for (const feature of geojson.features){
+                                if (feature.properties.title.toLowerCase().includes(searchbar.value.toLowerCase())){
+                                    //console.log(feature.geometry.coordinates)
+                                    
 
-
-            
-            
-            
-
-
-
-            /***
-            var html = '<div class="marker-popup">This is france</div>'
-                        
-
-            var CustomPopup = new mapboxgl.Popup({
-                anchor: 'bottom',
-                offset: {'bottom': [0,-10]},
-                closeOnCLick: false
-            }).setHTML(html)
-
-            var popup = new mapboxgl.Popup({offset: 25})
-                .setText('That is France dude')
-            
-            var el = document.createElement('div')
-            el.innerHTML = "Marker1"
-            el.id = 'marker'
-
-            new mapboxgl.Marker(el, {offset:[-25,-25]})
-                .setLngLat([5,45])
-                .setPopup(CustomPopup)
-                .addTo(map)
-            ***/
+                                    map.flyTo({
+                                        center: feature.geometry.coordinates,
+                                        zoom: 12,
+                                        duration: 5000,
+                                        essential: true
+                                    })
+                                    
+                                    break;
+                                }
+                            }
+                        }
+                    })
+            document.getElementById("r_cas").innerHTML = a + " Chateaux recencés"
            
         </script>
     </body>
