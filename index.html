@@ -102,16 +102,35 @@
                 left: -29%;
                 color: white;
             }
+            .iti {
+                width: 50%;
+                height: 30px;
+                background-color: rgb(9, 104, 148);
+                border: 0px;
+                border-radius: 15px;
+                position: relative;
+                top: 15px;
+                left: 25%;
+            }
+            .iti:hover {
+                filter: grayscale(30%);
+            }
         </style>
         <link src="./marker.html" id="marker">
         <div id="map">
             <div class="map-overlay" top>
                 <div class="map-overlay-inner">
                     <fieldset>
-                        <input type="text" placeholder=" Search" name="search" id="search">
+                        <input type="text" placeholder=" Rechercher" name="search" id="search" />
+                        <!---<button class="iti" id="iti">itinéraire</button>--->
                         <label>Pays</label>
                         <select name="pays" id="pays">
                             <option value="france">france</option>
+                            <option value="uk">United Kingdom</option>
+                        </select>
+                        <label>Région</label>
+                        <select name="regions" id="regions">
+                            <option value="default">---</option>
                         </select>
                         <label id="r_cas" name="r_cas"></label>
                         <a href="https://celebrian.notion.site/1b3101dabb1c80e4b639d7a7c59c22a2?pvs=105" id="link">Une suggestion ? </a>
@@ -121,43 +140,52 @@
                 </div>
             </div>
         </div>
+
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
         <script type="module">
             mapboxgl.accessToken = 'pk.eyJ1IjoicmFpdG92aW4iLCJhIjoiY2w2YjQyZzZxMWEyMzNpbzE4ZDBtMG45biJ9.bRYg8AO7oKpfwSG_WGdwwA'
-
+            console.log(window.innerWidth)
             alert("La carte est en cours de développement, par conséquent il manque une grande partie des données et des options")
-
+            var targetCoo = null
             const map = new mapboxgl.Map({ //affiche la map depuis mapbox
                 container: 'map',
                 style: 'mapbox://styles/raitovin/cl6b4gxh5000114nxo6plv0dw',
                 zoom: 4,
                 center: [5,45]
             })
-            map.addControl(new mapboxgl.GeolocateControl()) //localiser l'utilisateur
-
+            map.addControl(new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: true,
+                showUserLocation: true,
+                showUserHeading: true
+            })) //localiser l'utilisateur
+            
             import geojson from './geojson.json' with {type: 'json'} //import les données des chateaux (coordonnées, nom, description)
 
             var a = 0
             
-
+            
             for (const feature of geojson.features){
                 a = a + 1
                 const el = document.createElement('div') //créer les marqueurs
                 el.className = 'marker'
                 //el.tag = feature.properties.title
-
+                
                 const marker = new mapboxgl.Marker(el)
                     .setLngLat(feature.geometry.coordinates)
                     .setPopup(
                         new mapboxgl.Popup({offset: 8})
                             .setHTML(
-                                `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                                `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>` //console.log(${feature.geometry.coordinates})
                             )
                     ).addTo(map)
                     
-                    
-
-                    document.getElementById("r_cas").value = "Chateaux recencés" + a
+                el.addEventListener("click", () => { //permet de sélectionner un point cible pour tracer un itinéraire
+                    targetCoo = feature.geometry.coordinates
+                });
+                document.getElementById("r_cas").value = "Chateaux recencés" + a
             }
             //fonction rechercher
             const searchbar = document.getElementById("search")
@@ -181,7 +209,141 @@
                         }
                     })
             document.getElementById("r_cas").innerHTML = a + " Chateaux recencés"
-           
+            
+            //pour sélectionner une région précise
+            var pays = document.getElementById('pays')
+            var regions = document.getElementById('regions')
+            var liste = null
+            //lire le fichier country.json
+            function getCountry() {
+                var selectedCountry = pays.value
+                fetch('country.json')
+                    .then(response => {
+                        if (!response.ok){
+                            throw new Error('Il semble y avoir un problème ' + response.status)
+                        }
+                        return response.json()
+                    })
+                    .then(data => {
+                        liste = data
+                        regions.innerHTML = ""
+                        var defaultOption = document.createElement('option');
+                        defaultOption.value = '';
+                        defaultOption.text = '---';
+                        regions.appendChild(defaultOption);
+                        var vl = data[selectedCountry]
+                        
+                        for (var i = 0; i<Object.keys(vl).length; i++){
+                            var region = vl[i + 1]
+                            if (region){
+                                var option = document.createElement('option')
+                                option.value = i + 1
+                                option.text = region.name
+                                regions.appendChild(option)
+                            }
+                            
+                        }
+
+                        //--------------------------------
+                        
+                        regions.addEventListener('change', () => {
+                            var region = data[selectedCountry][regions.value]
+                            try {
+                                map.flyTo({
+                                    center: region.center,
+                                    zoom: 8,
+                                    duration: 5000,
+                                    essential: true
+                                })
+                            } catch (error) {
+                                map.flyTo({
+                                    center: vl.center,
+                                    zoom: 4,
+                                    duration: 5000,
+                                    essential: true
+                                })
+                            }
+                            /***if (region.name) {
+                                map.flyTo({
+                                    center: region.center,
+                                    zoom: 8,
+                                    duration: 5000,
+                                    essential: true
+                                })
+                            } else if (!region.name) {
+                                map.flyTo({
+                                    center: vl.center,
+                                    zoom: 4,
+                                    duration: 5000,
+                                    essential: true
+                                })
+                            }***/
+                        })
+
+                    })
+                    .catch(error => {
+                        console.error(error)
+                    })
+            }
+
+            function regionChanged() {
+                var selected = regions.value
+
+            }
+            pays.addEventListener('change', getCountry)
+            
+            getCountry()
+
+            function success(pos) {
+                const crd = pos.coords
+                var userLocation = [crd.longitude, crd.latitude]
+                console.log(userLocation)
+                return userLocation
+            }
+            function error(err) {
+                console.warn(`ERROR(${err.code}): ${err.message}`)
+            }
+
+            /***document.getElementById('iti').addEventListener('click', () => {
+                
+                const fromLocation = navigator.geolocation.getCurrentPosition(success, error)
+                const toWayPoint = targetCoo
+
+                let routeData
+                let routeStepsData
+                let instructionsData
+                let stepPointsData
+
+                fetch(`https://api.geoapify.com/v1/routing?waypoints=lonlat:${fromWaypoint.join(",")}|lonlat:${toWaypoint.join(",")}&mode=hike&details=route_details,elevation&apiKey=${myAPIKey}`).then(res => res.json()).then(routeResult => {
+                    routeData = routeResult
+
+                })
+            })***/
+
+            function updateRoute(routeJSON, updateLayers){
+                if (map.getSource('trajet')){
+                    map.getSource('trajet').setData(geoJSONData)
+                } else {
+                    map.addSource("trajet", {
+                        "type": "geojson",
+                        "data": geoJSONData
+                    })
+                }
+                if (map.getLayer('trajet') || updateLayers){
+                    if (map.getLayer('trajet')){
+                        map.removeLayer('trajet')
+                    }
+                    map.addLayer({
+                        id: 'trajet',
+                        source: 'trajet',
+                        type: 'line',
+                        paint: {
+                            'line-color': "#05a484",
+                            'line-width': 8
+                        }
+                    })
+                }
+            }
         </script>
     </body>
 </html>
