@@ -3682,6 +3682,2232 @@
         "title": "Château de Villiers-Saint-Denis",
         "description": "Description du Château de Villiers-Saint-Denis..."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1902777777777778,
+          46.3775
+        ]
+      },
+      "properties": {
+        "title": "Château des Aix",
+        "description": "Description du Château des Aix..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.631388888888889,
+          46.587500000000006
+        ]
+      },
+      "properties": {
+        "title": "Château des Alliers",
+        "description": "Description du Château des Alliers..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2244444444444444,
+          46.27055555555555
+        ]
+      },
+      "properties": {
+        "title": "Château d'Artangues",
+        "description": "Description du Château d'Artangues..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1644444444444444,
+          46.621944444444445
+        ]
+      },
+      "properties": {
+        "title": "Château de l'Augère",
+        "description": "Description du Château de l'Augère..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.288333333333333,
+          46.63944444444444
+        ]
+      },
+      "properties": {
+        "title": "Château d'Avrilly",
+        "description": "Description du Château d'Avrilly..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7475,
+          46.41166666666666
+        ]
+      },
+      "properties": {
+        "title": "Château de Bagnard",
+        "description": "Description du Château de Bagnard..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2463888888888888,
+          46.69694444444444
+        ]
+      },
+      "properties": {
+        "title": "Château de Balaine",
+        "description": "Description du Château de Balaine..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9955555555555557,
+          46.79055555555556
+        ]
+      },
+      "properties": {
+        "title": "Château de La Barre",
+        "description": "Description du Château de La Barre..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0455555555555556,
+          46.75361111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de la Baume",
+        "description": "Description du Château de la Baume..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6705555555555556,
+          46.60027777777778
+        ]
+      },
+      "properties": {
+        "title": "Château de Beaulon",
+        "description": "Description du Château de Beaulon..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6347222222222224,
+          46.46666666666667
+        ]
+      },
+      "properties": {
+        "title": "Château de Beauvoir",
+        "description": "Description du Château de Beauvoir..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3461111111111115,
+          46.635
+        ]
+      },
+      "properties": {
+        "title": "Château des Bédaures",
+        "description": "Description du Château des Bédaures..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9211111111111108,
+          46.721111111111114
+        ]
+      },
+      "properties": {
+        "title": "Château de Béguin",
+        "description": "Description du Château de Béguin..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0772222222222223,
+          46.19972222222222
+        ]
+      },
+      "properties": {
+        "title": "Château de Bellenaves",
+        "description": "Description du Château de Bellenaves..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3461111111111115,
+          46.56194444444444
+        ]
+      },
+      "properties": {
+        "title": "Château de Bellevue",
+        "description": "Description du Château de Bellevue..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6950000000000003,
+          46.53583333333333
+        ]
+      },
+      "properties": {
+        "title": "Château de la Bergerie",
+        "description": "Description du Château de la Bergerie..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.575833333333333,
+          46.343333333333334
+        ]
+      },
+      "properties": {
+        "title": "Château de Bien-Assis",
+        "description": "Description du Château de Bien-Assis..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.428611111111111,
+          46.236666666666665
+        ]
+      },
+      "properties": {
+        "title": "Château de Billy",
+        "description": "Description du Château de Billy..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2075,
+          46.257222222222225
+        ]
+      },
+      "properties": {
+        "title": "Château de Blanzat",
+        "description": "Description du Château de Blanzat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.253888888888889,
+          46.235
+        ]
+      },
+      "properties": {
+        "title": "Château de Bompré",
+        "description": "Description du Château de Bompré..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3938888888888887,
+          46.11222222222222
+        ]
+      },
+      "properties": {
+        "title": "Château du Bost",
+        "description": "Description du Château du Bost..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.560833333333333,
+          46.62583333333333
+        ]
+      },
+      "properties": {
+        "title": "Château de la Boube",
+        "description": "Description du Château de la Boube..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1819444444444445,
+          46.40083333333333
+        ]
+      },
+      "properties": {
+        "title": "Château de Boucherolles",
+        "description": "Description du Château de Boucherolles..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5091666666666668,
+          46.295833333333334
+        ]
+      },
+      "properties": {
+        "title": "Château de La Boulaize",
+        "description": "Description du Château de La Boulaize..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.058611111111111,
+          46.58833333333334
+        ]
+      },
+      "properties": {
+        "title": "Château de Bourbon-l'Archambault",
+        "description": "Description du Château de Bourbon-l'Archambault..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.315833333333333,
+          46.529444444444444
+        ]
+      },
+      "properties": {
+        "title": "Château de Bressolles",
+        "description": "Description du Château de Bressolles..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1344444444444446,
+          46.61194444444445
+        ]
+      },
+      "properties": {
+        "title": "Château du Breuil",
+        "description": "Description du Château du Breuil..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.169722222222222,
+          46.62777777777778
+        ]
+      },
+      "properties": {
+        "title": "Château des Brosses",
+        "description": "Description du Château des Brosses..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.51,
+          46.06305555555555
+        ]
+      },
+      "properties": {
+        "title": "Château de Busset",
+        "description": "Description du Château de Busset..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3069444444444445,
+          46.37361111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de La Chaise(Château du Riau)",
+        "description": "Description du Château de La Chaise(Château du Riau)..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3986111111111112,
+          46.19777777777777
+        ]
+      },
+      "properties": {
+        "title": "Château du Chambon",
+        "description": "Description du Château du Chambon..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6780555555555554,
+          46.49638888888889
+        ]
+      },
+      "properties": {
+        "title": "Château de Chambonnet",
+        "description": "Description du Château de Chambonnet..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.631111111111111,
+          46.500277777777775
+        ]
+      },
+      "properties": {
+        "title": "Château de Champigny",
+        "description": "Description du Château de Champigny..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.645,
+          46.025
+        ]
+      },
+      "properties": {
+        "title": "Château de Chappes",
+        "description": "Description du Château de Chappes..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2241666666666666,
+          46.26583333333333
+        ]
+      },
+      "properties": {
+        "title": "Château de Chareil-Cintrat",
+        "description": "Description du Château de Chareil-Cintrat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3966666666666665,
+          46.16
+        ]
+      },
+      "properties": {
+        "title": "Château de Charmeil",
+        "description": "Description du Château de Charmeil..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.206944444444445,
+          46.5925
+        ]
+      },
+      "properties": {
+        "title": "Château de Charnes",
+        "description": "Description du Château de Charnes..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0580555555555553,
+          46.7425
+        ]
+      },
+      "properties": {
+        "title": "Château de La Charnée",
+        "description": "Description du Château de La Charnée..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.572222222222222,
+          46.595
+        ]
+      },
+      "properties": {
+        "title": "Château de la Chassaigne",
+        "description": "Description du Château de la Chassaigne..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2463888888888888,
+          46.344166666666666
+        ]
+      },
+      "properties": {
+        "title": "Château de Chaumejean",
+        "description": "Description du Château de Chaumejean..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.888333333333333,
+          46.51361111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de la Chaussière",
+        "description": "Description du Château de la Chaussière..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3880555555555554,
+          46.331944444444446
+        ]
+      },
+      "properties": {
+        "title": "Château de Chazeuil",
+        "description": "Description du Château de Chazeuil..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.993888888888889,
+          46.124722222222225
+        ]
+      },
+      "properties": {
+        "title": "Château de Chouvigny",
+        "description": "Description du Château de Chouvigny..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6444444444444444,
+          46.43861111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de Chouvigny",
+        "description": "Description du Château de Chouvigny..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.156111111111111,
+          46.593611111111116
+        ]
+      },
+      "properties": {
+        "title": "Château de Clusors",
+        "description": "Description du Château de Clusors..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2372222222222224,
+          46.16361111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de la Commanderie",
+        "description": "Description du Château de la Commanderie..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9697222222222224,
+          46.47527777777778
+        ]
+      },
+      "properties": {
+        "title": "Château de la Condemine",
+        "description": "Description du Château de la Condemine..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.375,
+          46.29527777777778
+        ]
+      },
+      "properties": {
+        "title": "Château de Cordeboeuf",
+        "description": "Description du Château de Cordeboeuf..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2980555555555555,
+          46.35027777777778
+        ]
+      },
+      "properties": {
+        "title": "Château de la Cour",
+        "description": "Description du Château de la Cour..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5155555555555558,
+          46.488055555555555
+        ]
+      },
+      "properties": {
+        "title": "Château de la Cour-en-Chapeau",
+        "description": "Description du Château de la Cour-en-Chapeau..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5388888888888888,
+          46.45777777777778
+        ]
+      },
+      "properties": {
+        "title": "Château de la Crête",
+        "description": "Description du Château de la Crête..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.656388888888889,
+          46.55027777777777
+        ]
+      },
+      "properties": {
+        "title": "Château du Creux",
+        "description": "Description du Château du Creux..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.322450541851109,
+          46.62462382034447
+        ]
+      },
+      "properties": {
+        "title": "Château de Demoret",
+        "description": "Description du Château de Demoret..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.23,
+          46.2391667
+        ]
+      },
+      "properties": {
+        "title": "Château de Douzon",
+        "description": "Description du Château de Douzon..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6036111111111113,
+          46.34
+        ]
+      },
+      "properties": {
+        "title": "Château des ducs de Bourbon à Montluçon",
+        "description": "Description du Château des ducs de Bourbon à Montluçon..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3302777777777774,
+          46.3725
+        ]
+      },
+      "properties": {
+        "title": "Château des Écherolles",
+        "description": "Description du Château des Écherolles..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.582222222222222,
+          46.3466667
+        ]
+      },
+      "properties": {
+        "title": "Château des Étourneaux",
+        "description": "Description du Château des Étourneaux..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.155,
+          46.1011111
+        ]
+      },
+      "properties": {
+        "title": "Château de la Fauconnière",
+        "description": "Description du Château de la Fauconnière..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.645,
+          46.025
+        ]
+      },
+      "properties": {
+        "title": "Château de Ferrières",
+        "description": "Description du Château de Ferrières..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2397222222222224,
+          46.450833333333335
+        ]
+      },
+      "properties": {
+        "title": "Château des Écossays",
+        "description": "Description du Château des Écossays..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.565833333333333,
+          46.5594444
+        ]
+      },
+      "properties": {
+        "title": "Château de la Fin",
+        "description": "Description du Château de la Fin..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1577777777777776,
+          46.64611111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de l'Épine",
+        "description": "Description du Château de l'Épine..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.115555555555556,
+          46.3669444
+        ]
+      },
+      "properties": {
+        "title": "Château de Fontariol",
+        "description": "Description du Château de Fontariol..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5644444444444443,
+          46.4266667
+        ]
+      },
+      "properties": {
+        "title": "Château des Fougis",
+        "description": "Description du Château des Fougis..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.265337415650391,
+          46.167220308849735
+        ]
+      },
+      "properties": {
+        "title": "Château de Fouranges",
+        "description": "Description du Château de Fouranges..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2558333333333334,
+          46.4533333
+        ]
+      },
+      "properties": {
+        "title": "Château de Fourchaud",
+        "description": "Description du Château de Fourchaud..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.196944444444444,
+          46.2455556
+        ]
+      },
+      "properties": {
+        "title": "Château de Fourilles",
+        "description": "Description du Château de Fourilles..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1966666666666663,
+          46.1013889
+        ]
+      },
+      "properties": {
+        "title": "Château de Gannat",
+        "description": "Description du Château de Gannat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.266111111111111,
+          46.3486111
+        ]
+      },
+      "properties": {
+        "title": "Château des Garennes",
+        "description": "Description du Château des Garennes..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2616666666666667,
+          46.4352778
+        ]
+      },
+      "properties": {
+        "title": "Château de Givry",
+        "description": "Description du Château de Givry..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1641666666666666,
+          46.5894444
+        ]
+      },
+      "properties": {
+        "title": "Château du Goutay",
+        "description": "Description du Château du Goutay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7472222222222222,
+          46.41611111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de Grand-Champ",
+        "description": "Description du Château de Grand-Champ..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2780555555555555,
+          46.1294444
+        ]
+      },
+      "properties": {
+        "title": "Château des Granges",
+        "description": "Description du Château des Granges..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3016666666666663,
+          46.3916667
+        ]
+      },
+      "properties": {
+        "title": "Château de la Grillière",
+        "description": "Description du Château de la Grillière..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3694444444444445,
+          46.3913889
+        ]
+      },
+      "properties": {
+        "title": "Château des Guichardots",
+        "description": "Description du Château des Guichardots..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9058333333333333,
+          46.2766667
+        ]
+      },
+      "properties": {
+        "title": "Château des Guillaumets",
+        "description": "Description du Château des Guillaumets..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7130555555555556,
+          46.5091667
+        ]
+      },
+      "properties": {
+        "title": "Château d'Hérisson",
+        "description": "Description du Château d'Hérisson..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.591388888888889,
+          46.3786111
+        ]
+      },
+      "properties": {
+        "title": "Château de Jaligny-sur-Besbre",
+        "description": "Description du Château de Jaligny-sur-Besbre..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.194444444444444,
+          46.1638889
+        ]
+      },
+      "properties": {
+        "title": "Château de Jenzat",
+        "description": "Description du Château de Jenzat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3425000000000002,
+          46.5672222
+        ]
+      },
+      "properties": {
+        "title": "Château de Joulet",
+        "description": "Description du Château de Joulet..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.049444444444444,
+          46.4094444
+        ]
+      },
+      "properties": {
+        "title": "Château de Laly",
+        "description": "Description du Château de Laly..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0566666666666666,
+          46.4522222
+        ]
+      },
+      "properties": {
+        "title": "Château de la Lande Rocles",
+        "description": "Description du Château de la Lande..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6483333333333334,
+          46.5402778
+        ]
+      },
+      "properties": {
+        "title": "Château de la Lande Vallon-en-Sully",
+        "description": "Description du Château de la Lande..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1925,
+          46.1305556
+        ]
+      },
+      "properties": {
+        "title": "Château de Langlard",
+        "description": "Description du Château de Langlard..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.816111111111111,
+          46.5075
+        ]
+      },
+      "properties": {
+        "title": "Château des Launays",
+        "description": "Description du Château des Launays..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9216666666666664,
+          46.7025
+        ]
+      },
+      "properties": {
+        "title": "Château de Lévis",
+        "description": "Description du Château de Lévis..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3897222222222223,
+          46.3830556
+        ]
+      },
+      "properties": {
+        "title": "Château de Longbost",
+        "description": "Description du Château de Longbost..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6125000000000003,
+          46.3677778
+        ]
+      },
+      "properties": {
+        "title": "Château du Lonzat Jaligny-sur-Besbre",
+        "description": "Description du Château du Lonzat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3938888888888887,
+          46.2461111
+        ]
+      },
+      "properties": {
+        "title": "Château du Lonzat Marcenat",
+        "description": "Description du Château du Lonzat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          null,
+          null
+        ]
+      },
+      "properties": {
+        "title": "Château du Petit Luçay",
+        "description": "Description du Château du Petit Luçay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.101127110904463,
+          46.61165032603575
+        ]
+      },
+      "properties": {
+        "title": "Château du Grand Luçay",
+        "description": "Description du Château du Grand Luçay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.276388888888889,
+          46.1075
+        ]
+      },
+      "properties": {
+        "title": "Château de Lyonne",
+        "description": "Description du Château de Lyonne..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.330833333333333,
+          46.5663889
+        ]
+      },
+      "properties": {
+        "title": "Tour de la Mal-Coiffée",
+        "description": "Description du Tour de la Mal-Coiffée..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [  
+          3.1800828770574188  ,
+          46.531061143618594
+        ]
+      },
+      "properties": {
+        "title": "Château de la Matray",
+        "description": "Description du Château de la Matray..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.730489865258912,
+          46.409260965378444
+        ]
+      },
+      "properties": {
+        "title": "Château de Mauvaisinière",
+        "description": "Description du Château de Mauvaisinière..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4650000000000003,
+          46.2883333
+        ]
+      },
+      "properties": {
+        "title": "Château du Méage",
+        "description": "Description du Château du Méage..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.269722222222222,
+          46.57555555555556
+        ]
+      },
+      "properties": {
+        "title": "Château des Melays",
+        "description": "Description du Château des Melays..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.294722222222222,
+          46.6238889
+        ]
+      },
+      "properties": {
+        "title": "Château de Mirebeau",
+        "description": "Description du Château de Mirebeau..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6236111111111113,
+          46.3005556
+        ]
+      },
+      "properties": {
+        "title": "Château des Modières",
+        "description": "Description du Château des Modières..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.276111111111111,
+          46.3833333
+        ]
+      },
+      "properties": {
+        "title": "Château de Montcoquier",
+        "description": "Description du Château de Montcoquier..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2675,
+          46.562777777777775
+        ]
+      },
+      "properties": {
+        "title": "Château de Montgarnaud",
+        "description": "Description du Château de Montgarnaud..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0941666666666667,
+          46.1480556
+        ]
+      },
+      "properties": {
+        "title": "Château de la Mothe",
+        "description": "Description du Château de la Mothe..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.185833333333333,
+          46.12222222222222
+        ]
+      },
+      "properties": {
+        "title": "Château de La Motte-Mazerier",
+        "description": "Description du Château de La Motte-Mazerier..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.513333333333333,
+          46.2963889
+        ]
+      },
+      "properties": {
+        "title": "Château de Montaigu-le-Blin",
+        "description": "Description du Château de Montaigu-le-Blin..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.016111111111111,
+          46.4088889
+        ]
+      },
+      "properties": {
+        "title": "Château de Montbillon",
+        "description": "Description du Château de Montbillon..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6236111111111113,
+          46.0386111
+        ]
+      },
+      "properties": {
+        "title": "Château de Montgilbert",
+        "description": "Description du Château de Montgilbert..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3025738610235185,
+          46.4113039994131
+        ]
+      },
+      "properties": {
+        "title": "Tour du Moulin Neuf",
+        "description": "Description du Tour du Moulin Neuf..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9808333333333334,
+          46.1566667
+        ]
+      },
+      "properties": {
+        "title": "Château de Nades",
+        "description": "Description du Château de Nades..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1102777777777777,
+          46.175
+        ]
+      },
+      "properties": {
+        "title": "Château de Naves",
+        "description": "Description du Château de Naves..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9597222222222226,
+          46.7363889
+        ]
+      },
+      "properties": {
+        "title": "Château de Neureux",
+        "description": "Description du Château de Neureux..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.286111111111111,
+          46.54611111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de Neuville",
+        "description": "Description du Château de Neuville..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.336388888888889,
+          46.5388889
+        ]
+      },
+      "properties": {
+        "title": "Château de Nomazy",
+        "description": "Description du Château de Nomazy..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5733333333333333,
+          46.2608333
+        ]
+      },
+      "properties": {
+        "title": "Château de l'Ours",
+        "description": "Description du Château de l'Ours..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.638333333333333,
+          46.2486111
+        ]
+      },
+      "properties": {
+        "title": "Château de La Palice",
+        "description": "Description du Château de La Palice..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3544444444444443,
+          46.5538889
+        ]
+      },
+      "properties": {
+        "title": "Château de Panloup",
+        "description": "Description du Château de Panloup..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3630555555555555,
+          46.4605556
+        ]
+      },
+      "properties": {
+        "title": "Château de Paray",
+        "description": "Description du Château de Paray..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4544444444444444,
+          46.4247222
+        ]
+      },
+      "properties": {
+        "title": "Château de Paslières",
+        "description": "Description du Château de Paslières..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.556111111111111,
+          46.61
+        ]
+      },
+      "properties": {
+        "title": "Château du Pavillon",
+        "description": "Description du Château du Pavillon..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2483333333333335,
+          46.2222222
+        ]
+      },
+      "properties": {
+        "title": "Château de Percenat",
+        "description": "Description du Château de Percenat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8377777777777777,
+          46.474722222222226
+        ]
+      },
+      "properties": {
+        "title": "Château de Petit Bois",
+        "description": "Description du Château de Petit Bois..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6222222222222222,
+          46.5552778
+        ]
+      },
+      "properties": {
+        "title": "Château de Peufeilhoux",
+        "description": "Description du Château de Peufeilhoux..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.647777777777778,
+          46.585
+        ]
+      },
+      "properties": {
+        "title": "Château du Plaix",
+        "description": "Description du Château du Plaix..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.446388888888889,
+          46.5744444
+        ]
+      },
+      "properties": {
+        "title": "Château de Pomay",
+        "description": "Description du Château de Pomay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1069444444444447,
+          46.6202778
+        ]
+      },
+      "properties": {
+        "title": "Château de La Pommeraye",
+        "description": "Description du Château de La Pommeraye..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7119444444444447,
+          46.70444444444445
+        ]
+      },
+      "properties": {
+        "title": "Château de Pontcharraud",
+        "description": "Description du Château de Pontcharraud..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.593611111111111,
+          46.5188889
+        ]
+      },
+      "properties": {
+        "title": "Château des Prugnes",
+        "description": "Description du Château des Prugnes..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.609166666666667,
+          46.30222222222222
+        ]
+      },
+      "properties": {
+        "title": "Manoir des Quillets",
+        "description": "Description du Manoir des Quillets..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4708333333333337,
+          46.0877778
+        ]
+      },
+      "properties": {
+        "title": "Château de Quinssat",
+        "description": "Description du Château de Quinssat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.277222222222222,
+          46.6625
+        ]
+      },
+      "properties": {
+        "title": "Château du Riau",
+        "description": "Description du Château du Riau..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.336666666666667,
+          46.1061111
+        ]
+      },
+      "properties": {
+        "title": "Château de Rilhat",
+        "description": "Description du Château de Rilhat..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.216666666666667,
+          46.2552778
+        ]
+      },
+      "properties": {
+        "title": "Château de La Rivière",
+        "description": "Description du Château de La Rivière..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.186111111111111,
+          46.6733333
+        ]
+      },
+      "properties": {
+        "title": "Château des Roches",
+        "description": "Description du Château des Roches..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2544444444444443,
+          46.4697222
+        ]
+      },
+      "properties": {
+        "title": "Château de Rochefort (Besson)",
+        "description": "Description du Château de Rochefort..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.13,
+          46.1352778
+        ]
+      },
+      "properties": {
+        "title": "Château de Rochefort (Saint-Bonnet-de-Rochefort)",
+        "description": "Description du Château de Rochefort..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.165,
+          46.6052778
+        ]
+      },
+      "properties": {
+        "title": "Château des Sacrots",
+        "description": "Description du Château des Sacrots..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.983888888888889,
+          46.7747222
+        ]
+      },
+      "properties": {
+        "title": "Château de Saint-Augustin",
+        "description": "Description du Château de Saint-Augustin..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.963611111111111,
+          46.4322222
+        ]
+      },
+      "properties": {
+        "title": "Manoir de Saint-Hubert",
+        "description": "Description du Château de Saint-Hubert..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.754166666666667,
+          46.4702778
+        ]
+      },
+      "properties": {
+        "title": "Château de Saligny",
+        "description": "Description du Château de Saligny..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0905555555555555,
+          46.5302778
+        ]
+      },
+      "properties": {
+        "title": "Château de la Salle (Meillers)",
+        "description": "Description du Château de la Salle..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8766666666666665,
+          46.5072222
+        ]
+      },
+      "properties": {
+        "title": "Château de la Salle (Vieure)",
+        "description": "Description du Château de la Salle..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.895277777777778,
+          46.257222222222225
+        ]
+      },
+      "properties": {
+        "title": "Château de Sallebrune(Salbrune)",
+        "description": "Description du Château de Sallebrune(Salbrune)..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.209166666666667,
+          46.1766667
+        ]
+      },
+      "properties": {
+        "title": "Château de Salles",
+        "description": "Description du Château de Salles..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.9758333333333336,
+          46.4302778
+        ]
+      },
+      "properties": {
+        "title": "Château de Sceauve",
+        "description": "Description du Château de Sceauve..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3372222222222225,
+          46.5958333
+        ]
+      },
+      "properties": {
+        "title": "Château de Segange",
+        "description": "Description du Château de Segange..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8255555555555554,
+          46.3425
+        ]
+      },
+      "properties": {
+        "title": "Château de la Souche",
+        "description": "Description du Château de la Souche..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.640277777777778,
+          46.48
+        ]
+      },
+      "properties": {
+        "title": "Château de Thoury",
+        "description": "Description du Château de Thoury..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4786111111111113,
+          46.3730556
+        ]
+      },
+      "properties": {
+        "title": "Donjon de la Toque",
+        "description": "Description du Donjon de la Toque..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6688888888888886,
+          46.6372222
+        ]
+      },
+      "properties": {
+        "title": "Château des Torcy",
+        "description": "Description du Château des Torcy..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.276111111111111,
+          46.590833333333336
+        ]
+      },
+      "properties": {
+        "title": "Château de Toury",
+        "description": "Description du Château de Toury..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.5933333333333333,
+          46.32805555555556
+        ]
+      },
+      "properties": {
+        "title": "Château de Trézelles",
+        "description": "Description du Château de Trézelles..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.556111111111111,
+          46.61
+        ]
+      },
+      "properties": {
+        "title": "Château de Tronçay",
+        "description": "Description du Château de Tronçay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3066666666666666,
+          46.55305555555555
+        ]
+      },
+      "properties": {
+        "title": "Château de Vallières",
+        "description": "Description du Château de Vallières..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2577777777777777,
+          46.36
+        ]
+      },
+      "properties": {
+        "title": "Château de Vaux",
+        "description": "Description du Château de Vaux..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0555555555555554,
+          46.1638889
+        ]
+      },
+      "properties": {
+        "title": "Château de Veauce",
+        "description": "Description du Château de Veauce..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2508333333333335,
+          46.3461111
+        ]
+      },
+      "properties": {
+        "title": "Château de Verneuil-en-Bourbonnais",
+        "description": "Description du Château de Verneuil-en-Bourbonnais..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2377777777777776,
+          46.4655556
+        ]
+      },
+      "properties": {
+        "title": "Château du Vieux-Bost",
+        "description": "Description du Château du Vieux-Bost..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.2655555555555558,
+          46.57472222222223
+        ]
+      },
+      "properties": {
+        "title": "Château du Vieux-Melay",
+        "description": "Description du Château du Vieux-Melay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.585,
+          46.31361111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de Villard",
+        "description": "Description du Château de Villard..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.272777777777778,
+          46.3533333
+        ]
+      },
+      "properties": {
+        "title": "Château du Vousset",
+        "description": "Description du Château du Vousset..."
+      }
     }
   ]
 }
