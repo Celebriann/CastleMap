@@ -149,7 +149,7 @@
             var targetCoo = null
             const map = new mapboxgl.Map({ //affiche la map depuis mapbox
                 container: 'map',
-                style: 'mapbox://styles/raitovin/cl6b4gxh5000114nxo6plv0dw',
+                style: 'mapbox://styles/raitovin/cl6b4gxh5000114nxo6plv0dw?optimize=true',
                 zoom: 4,
                 center: [5,45]
             })
@@ -166,27 +166,49 @@
 
             var a = 0
             
+            fetch('geojson.json') //improve performance by 0.3s
+                .then(response => response.json())
+                .then(geojson => {
+                    map.on('load', () => {
+                        map.addSource('points', {
+                            'type': 'geojson',
+                            'data': geojson
+                        })
+
+                        map.addLayer({
+                            'id': 'points-layer',
+                            'type': 'circle',
+                            'source': 'points',
+                            'paint': {
+                                'circle-radius': 10,
+                                'circle-color': 'red'
+                            }
+                        })
+
+                        map.on('click', 'points-layer', (e) => {
+                            if (e.features.length > 0) {
+                                const coordinates = e.features[0].geometry.coordinates.slice()
+                                const title = e.features[0].properties.title
+                                const description = e.features[0].properties.description
+                                
+                                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180){
+                                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                                }
+
+                                new mapboxgl.Popup()
+                                    .setLngLat(coordinates)
+                                    .setHTML(`<h3>${e.features[0].properties.title}</h3><p>${description}</p>`)
+                                    .addTo(map)
+                            }
+                        })
+
+                    })
+                })
+                .catch(error => {
+                    console.log("error")
+                })
             
-            for (const feature of geojson.features){
-                a = a + 1
-                const el = document.createElement('div') //créer les marqueurs
-                el.className = 'marker'
-                //el.tag = feature.properties.title
-                
-                const marker = new mapboxgl.Marker(el)
-                    .setLngLat(feature.geometry.coordinates)
-                    .setPopup(
-                        new mapboxgl.Popup({offset: 8})
-                            .setHTML(
-                                `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>` //console.log(${feature.geometry.coordinates})
-                            )
-                    ).addTo(map)
-                    
-                el.addEventListener("click", () => { //permet de sélectionner un point cible pour tracer un itinéraire
-                    targetCoo = feature.geometry.coordinates
-                });
-                document.getElementById("r_cas").value = "Chateaux recencés" + a
-            }
+            
             //fonction rechercher
             const searchbar = document.getElementById("search")
                     searchbar.addEventListener("keydown", (event) => {
@@ -195,7 +217,7 @@
                                 if (feature.properties.title.toLowerCase().includes(searchbar.value.toLowerCase())){
                                     //console.log(feature.geometry.coordinates)
                                     
-
+                                    
                                     map.flyTo({
                                         center: feature.geometry.coordinates,
                                         zoom: 12,
@@ -245,7 +267,7 @@
                         }
 
                         //--------------------------------
-                        
+                        // diriger la caméra vers la région sélectionnée
                         regions.addEventListener('change', () => {
                             var region = data[selectedCountry][regions.value]
                             try {
@@ -263,21 +285,6 @@
                                     essential: true
                                 })
                             }
-                            /***if (region.name) {
-                                map.flyTo({
-                                    center: region.center,
-                                    zoom: 8,
-                                    duration: 5000,
-                                    essential: true
-                                })
-                            } else if (!region.name) {
-                                map.flyTo({
-                                    center: vl.center,
-                                    zoom: 4,
-                                    duration: 5000,
-                                    essential: true
-                                })
-                            }***/
                         })
 
                     })
