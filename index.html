@@ -169,22 +169,48 @@
             fetch('geojson.json') //improve performance by 0.3s
                 .then(response => response.json())
                 .then(geojson => {
-                    map.on('load', () => {
+                    map.on('load', (ev) => {
+                        
                         map.addSource('points', {
                             'type': 'geojson',
-                            'data': geojson
+                            'data': geojson,
+                            'cluster': true,
+                            'clusterMaxZoom': 5,
+                            'clusterRadius': 30
                         })
 
+                        document.getElementById("r_cas").innerHTML = geojson.features.length + " Chateaux recencés"
+                        
+                        map.addLayer({
+                            'id': 'clusters',
+                            'type': 'circle',
+                            'source': 'points',
+                            'filter': ['has', 'point_count'],
+                            'paint': {
+                                'circle-radius': 20,
+                                'circle-color': 'red'
+                            }
+                        })
+                        map.addLayer({
+                            'id': 'cluster-count',
+                            'type': 'circle',
+                            'filter': ['has', 'point_count'],
+                            'paint': {
+                                'circle-radius': 20,
+                                'circle-color': 'red'
+                            }
+                        })
                         map.addLayer({
                             'id': 'points-layer',
                             'type': 'circle',
                             'source': 'points',
+                            'filter': ['!', ['has', 'point_count']],
                             'paint': {
-                                'circle-radius': 10,
+                                'circle-radius': 7,
                                 'circle-color': 'red'
                             }
                         })
-
+                        
                         map.on('click', 'points-layer', (e) => {
                             if (e.features.length > 0) {
                                 const coordinates = e.features[0].geometry.coordinates.slice()
@@ -201,6 +227,7 @@
                                     .addTo(map)
                             }
                         })
+                        
 
                     })
                 })
@@ -230,7 +257,7 @@
                             }
                         }
                     })
-            document.getElementById("r_cas").innerHTML = a + " Chateaux recencés"
+            
             
             //pour sélectionner une région précise
             var pays = document.getElementById('pays')
