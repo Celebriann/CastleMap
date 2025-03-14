@@ -202,7 +202,7 @@
                             'data': geojson,
                             'cluster': true,
                             'clusterMaxZoom': 5,
-                            'clusterRadius': 30
+                            'clusterRadius': 70
                         })
 
                         document.getElementById("r_cas").innerHTML = geojson.features.length + " Chateaux recencés"
@@ -213,7 +213,7 @@
                             'source': 'points',
                             'filter': ['has', 'point_count'],
                             'paint': {
-                                'circle-radius': 20,
+                                'circle-radius': 35,
                                 'circle-color': 'red'
                             }
                         })
@@ -222,7 +222,7 @@
                             'type': 'circle',
                             'filter': ['has', 'point_count'],
                             'paint': {
-                                'circle-radius': 20,
+                                'circle-radius': 35,
                                 'circle-color': 'red'
                             }
                         })
