@@ -25,7 +25,7 @@
 
                 // Si l'utilisateur est sur un appareil mobile, redirigez-le vers une autre page 
             if (!(isMobileDevice())) {
-                window.location.href = "../../index.html"; // Remplacez par l'URL de votre site mobile
+                window.location.href = "CastleMap/index.html"; // Remplacez par l'URL de votre site mobile
             }
         </script>
     </head>
@@ -178,7 +178,7 @@
 
             var a = 0
             
-            fetch('../CastleMap/geojson.json') //improve performance by 0.3s
+            fetch('CastleMap/geojson.json') //improve performance by 0.3s
                 .then(response => response.json())
                 .then(geojson => {
                     map.on('load', (ev) => {
@@ -278,7 +278,7 @@
             //lire le fichier country.json
             function getCountry() {
                 var selectedCountry = pays.value
-                fetch('../CastleMap/country.json')
+                fetch('CastleMap/country.json')
                     .then(response => {
                         if (!response.ok){
                             throw new Error('Il semble y avoir un problème ' + response.status)
