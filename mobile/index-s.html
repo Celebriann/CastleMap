@@ -178,7 +178,7 @@
 
             var a = 0
             
-            fetch('/CastleMap/geojson.json') //improve performance by 0.3s
+            fetch('/../geojson.json') //improve performance by 0.3s
                 .then(response => response.json())
                 .then(geojson => {
                     map.on('load', (ev) => {
@@ -278,7 +278,7 @@
             //lire le fichier country.json
             function getCountry() {
                 var selectedCountry = pays.value
-                fetch('/CastleMap/country.json')
+                fetch('/../country.json')
                     .then(response => {
                         if (!response.ok){
                             throw new Error('Il semble y avoir un problème ' + response.status)
