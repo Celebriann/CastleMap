@@ -92,7 +92,7 @@
             }
             .map-overlay-inner input {
                 width: 90%;
-                height: 70px;
+                height: 5.51vh;
                 position: relative;
                 top: 1.97vh;
                 left: 5%;
@@ -100,6 +100,15 @@
                 border-radius: 2.75vh;
                 outline: none;
                 font-size: 2.36vh;
+            }
+            .search {
+                position: absolute;
+                right: 4vh;
+                top: 2.9vh;
+                height: 5.51vh;
+                background-color: rgba(0, 0, 0, 0.0);
+                border: 0vh;
+                font-size: 1.5vh;
             }
             .map-overlay-inner input::placeholder {
                 font-size: 1.97vh;
@@ -137,7 +146,8 @@
             <div class="map-overlay" top>
                 <div class="map-overlay-inner">
                     <fieldset>
-                        <input type="text" placeholder=" Rechercher" name="search" id="search" />
+                        <input type="text" placeholder=" Nom" name="search" id="search" />
+                        <button class="search" id="rechercher">Rechercher</button>
                         <!---<button class="iti" id="iti">itinéraire</button>--->
                         <label class="pays">Pays</label>
                         <select name="pays" id="pays">
@@ -254,23 +264,20 @@
             
             //fonction rechercher
             const searchbar = document.getElementById("search")
-                    searchbar.addEventListener("keydown", (event) => {
-                        alert(event.key)
-                        if (event.key === 'Enter') {
-                            for (const feature of geojson.features){
-                                if (feature.properties.title.toLowerCase().includes(searchbar.value.toLowerCase())){
+                    document.getElementById('rechercher').addEventListener("click", () => {
+                        for (const feature of geojson.features){
+                            if (feature.properties.title.toLowerCase().includes(searchbar.value.toLowerCase())){
                                     //console.log(feature.geometry.coordinates)
                                     
                                     
-                                    map.flyTo({
-                                        center: feature.geometry.coordinates,
-                                        zoom: 12,
-                                        duration: 5000,
-                                        essential: true
-                                    })
+                                map.flyTo({
+                                    center: feature.geometry.coordinates,
+                                    zoom: 12,
+                                    duration: 5000,
+                                    essential: true
+                                })
                                     
-                                    break;
-                                }
+                                break;
                             }
                         }
                     })
