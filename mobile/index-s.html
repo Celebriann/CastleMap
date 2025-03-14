@@ -255,6 +255,7 @@
             //fonction rechercher
             const searchbar = document.getElementById("search")
                     searchbar.addEventListener("keydown", (event) => {
+                        alert(event.key)
                         if (event.key === 'Enter') {
                             for (const feature of geojson.features){
                                 if (feature.properties.title.toLowerCase().includes(searchbar.value.toLowerCase())){
