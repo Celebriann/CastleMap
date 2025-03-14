@@ -266,7 +266,14 @@
             const searchbar = document.getElementById("search")
                     document.getElementById('rechercher').addEventListener("click", () => {
                         for (const feature of geojson.features){
-                            if (feature.properties.title.toLowerCase().includes(searchbar.value.toLowerCase())){
+                            var recherche = searchbar.value
+                            
+                            if (recherche.endsWith(' ')) {
+                                recherche = recherche.slice(0, -1)
+                                console.log(recherche)
+                            }
+
+                            if (feature.properties.title.toLowerCase().includes(recherche.toLowerCase())){
                                     //console.log(feature.geometry.coordinates)
                                     
                                     
