@@ -237,13 +237,14 @@
                 zoom: 4,
                 center: [5,45]
             })
-            map.addControl(new mapboxgl.GeolocateControl({
+            const geolocate = new mapboxgl.GeolocateControl({
                 positionOptions: {
                     enableHighAccuracy: true
                 },
                 trackUserLocation: true,
                 showUserHeading: true
-            }));
+            });
+            map.addControl(geolocate)
             var startCoordinates = null
             var endCoordinates = null
             import geojson from './geojson.json' with {type: 'json'} //import les données des chateaux (coordonnées, nom, description)
@@ -352,6 +353,7 @@
                 return data.routes[0].geometry.coordinates
             }
             async function showRoute() {
+                geolocate.trigger()
                 if (map.getSource('route')){
                     map.removeLayer('route')
                     map.removeSource('route')
