@@ -57,9 +57,12 @@
                 background-color: rgba(61, 61, 61, 0.5);
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
                 height: 39vh;
-                border-radius: 1.57vh;
                 margin-bottom: 0.39vh;
-                
+                display: block;
+
+                border-top-right-radius: 1.57vh;
+                border-bottom-right-radius: 1.57vh;
+                border-bottom-left-radius: 1.57vh;
             }
             .map-overlay-inner fieldset {
                 border: none;
@@ -104,7 +107,7 @@
             .search {
                 position: absolute;
                 right: 4vh;
-                top: 2.9vh;
+                top: 5.25vh;
                 height: 5.51vh;
                 background-color: rgba(0, 0, 0, 0.0);
                 border: 0vh;
@@ -127,24 +130,108 @@
                 left: 10%;
                 color: white;
             }
+            
+            button:hover {
+                filter: grayscale(30%);
+            }
+            /* NAVIGATION */
+
+            .map-overlay .navigation-overlay-inner {
+                display: none;
+                background-color: rgba(61, 61, 61, 0.5);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                height: 39vh;
+                border-radius: 1.57vh;
+                margin-bottom: 0.39vh;   
+            }
+            .navigation-overlay-inner input {
+                width: 90%;
+                height: 5.51vh;
+                position: relative;
+                top: 1.97vh;
+                left: 5%;
+                border: none;
+                outline: none;
+                font-size: 2.36vh;
+            }
+            .start {
+                border-top-left-radius: 2.755vh;
+                border-top-right-radius: 2.755vh;
+            }
+            .end {
+                border-bottom-right-radius: 2.755vh;
+                border-bottom-left-radius: 2.755vh;
+            }
             .iti {
                 width: 50%;
-                height: 30px;
+                height: 5.51vh;
                 background-color: rgb(9, 104, 148);
-                border: 0px;
-                border-radius: 15px;
+                border: 0;
+                border-radius: 2.755vh;
                 position: relative;
-                top: 15px;
-                left: 25%;
+                top: 5vh;
+                left: 45%;
+                font-size: 2.36vh;
             }
-            .iti:hover {
-                filter: grayscale(30%);
+            .get-location {
+                width: 5.51vh;
+                height: 5.51vh;
+                background-color: rgb(23, 138, 113);
+                border: 0;
+                border-radius: 2.755vh;
+                position: relative;
+                top: 5.4vh;
+                left: -45%;
+                padding: 0;
+            }
+            .get-location img {
+                width: 3.5vh;
+                height: 3.5vh;
+                position: relative;
+                top: 0.16vh;
+            }
+            .go {
+                width: 90%;
+                height: 5.51vh;
+                background-color: rgb(10, 121, 97);
+                border: 0;
+                border-radius: 2.755vh;
+                position: relative;
+                top: 10vh;
+                left: 5%;
+                font-size: 2.36vh;
+            }
+
+            .explore {
+                width: 20%;
+                height: 3.2vh;
+                background-color: rgba(61, 61, 61, 0.5);
+                border: 0;
+                border-top-left-radius: 1.6vh;
+                position: relative;
+                font-size: 1.8vh;
+                text-align: center;
+                color: white;
+            }
+            .aller {
+                width: 20%;
+                height: 3.2vh;
+                background-color: rgba(61, 61, 61, 0.5);
+                border: 0;
+                border-top-right-radius: 1.6vh;
+                position: relative;
+                left: -1.5%;
+                font-size: 1.8vh;
+                text-align: center;
+                color: white;
             }
         </style>
         <link src="./marker.html" id="marker">
         <div id="map">
-            <div class="map-overlay" top>
-                <div class="map-overlay-inner">
+            <div class="map-overlay">
+                <button class="explore" id="explore">Explorer</button>
+                <button class="aller" id="aller">Aller</button>
+                <div class="map-overlay-inner" id="map-overlay-inner">
                     <fieldset>
                         <input type="text" placeholder=" Nom" name="search" id="search" />
                         <button class="search" id="rechercher">Rechercher</button>
@@ -164,8 +251,32 @@
                     </fieldset>
                     <div class="more"></div>
                 </div>
+                <div class="navigation-overlay-inner" id="navigation-overlay-inner">
+                    <input type="input" id="start" class="start" placeholder=" départ" />
+                    <input type="input" id="end" class="end" placeholder=" arrivée" />
+                    
+                    <button class="iti" id="iti">Itinéraire</button>
+                    <button class="get-location" id="get-location">
+                        <img src="/icon/icons8-marqueur-100.png">
+                    </button>
+                    <button class="go" id="go">Go</button>
+                </div>
             </div>
+            
         </div>
+        <script>
+            // INTERFACE CONTROL
+            document.getElementById('explore').addEventListener('click', () => {
+                document.getElementById("navigation-overlay-inner").style.display = "none"
+                document.getElementById("map-overlay-inner").style.display = "block"
+                console.log("Affiche le menu explorer")
+            })
+            document.getElementById('aller').addEventListener('click', () => {
+                document.getElementById("map-overlay-inner").style.display = "none"
+                document.getElementById("navigation-overlay-inner").style.display = "block"
+                console.log("Affiche le menu Aller")
+            })
+        </script>
 
         <script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
         <script type="module">
@@ -214,7 +325,7 @@
                             'filter': ['has', 'point_count'],
                             'paint': {
                                 'circle-radius': 35,
-                                'circle-color': 'red'
+                                'circle-color': '#2491ba'
                             }
                         })
                         map.addLayer({
@@ -223,7 +334,7 @@
                             'filter': ['has', 'point_count'],
                             'paint': {
                                 'circle-radius': 35,
-                                'circle-color': 'red'
+                                'circle-color': '#2491ba'
                             }
                         })
                         map.addLayer({
@@ -233,7 +344,7 @@
                             'filter': ['!', ['has', 'point_count']],
                             'paint': {
                                 'circle-radius': 7,
-                                'circle-color': 'red'
+                                'circle-color': '#2491ba'
                             }
                         })
                         
@@ -251,6 +362,19 @@
                                     .setLngLat(coordinates)
                                     .setHTML(`<h3>${e.features[0].properties.title}</h3><p>${description}</p>`)
                                     .addTo(map)
+
+
+                                //Trajet + localisation utilisateur
+
+                                const itinéraire = document.getElementById("iti")
+                                const destination = document.getElementById("end")
+                                
+                                
+
+                                itinéraire.addEventListener("click", () => {
+                                    destination.value = title
+                                    endCoordinates = coordinates
+                                })
                             }
                         })
                         
@@ -260,6 +384,64 @@
                 .catch(error => {
                     console.log("error")
                 })
+            
+            const userLocation = document.getElementById("get-location")
+            const depart = document.getElementById("start")
+            userLocation.addEventListener("click", () => {
+                const watchID = navigator.geolocation.watchPosition((position) => {
+                    startCoordinates = [position.coords.longitude, position.coords.latitude]
+                    console.log(startCoordinates)
+                    depart.value = "Position utilisateur"
+                })
+            })
+
+            async function getRoute(start, end) {
+                const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${start};${end}?geometries=geojson&overview=full&access_token=pk.eyJ1IjoicmFpdG92aW4iLCJhIjoiY2w2YjQyZzZxMWEyMzNpbzE4ZDBtMG45biJ9.bRYg8AO7oKpfwSG_WGdwwA`;
+                const response =  await fetch(url)
+                const data = await response.json()
+                return data.routes[0].geometry.coordinates
+            }
+            async function showRoute() {
+                geolocate.trigger()
+                if (map.getSource('route')){
+                    map.removeLayer('route')
+                    map.removeSource('route')
+                }
+                try {
+                    const start = startCoordinates
+                    const end = endCoordinates
+
+                    const route = await getRoute(start, end)
+
+                    map.addSource('route', {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                'type': 'LineString',
+                                'coordinates': route
+                            }
+                        }
+                    })
+                    map.addLayer({
+                        'id': 'route',
+                        'type': 'line',
+                        'source': 'route',
+                        'layout': {
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        'paint': {
+                            'line-color': '#039577',
+                            'line-width': 8
+                        }
+                    })
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+            document.getElementById('go').addEventListener('click', showRoute)
             
             
             //fonction rechercher
