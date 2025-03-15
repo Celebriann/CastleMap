@@ -107,7 +107,7 @@
             .search {
                 position: absolute;
                 right: 4vh;
-                top: 5.25vh;
+                top: 14.5%;
                 height: 5.51vh;
                 background-color: rgba(0, 0, 0, 0.0);
                 border: 0vh;
@@ -225,10 +225,36 @@
                 text-align: center;
                 color: white;
             }
+
+            /* PENDANT LA NAVIGATION */
+
+            .route-overlay {
+                position: fixed;
+                width: 100%;
+                height: 8vh;
+                display: none;
+                z-index: 2;
+            }
+            .end-route {
+                width: 6vh;
+                height: 6vh;
+                border: 0;
+                border-radius: 3vh;
+                background-color: rgb(23, 138, 113);
+                position: absolute;
+                top: 12%;
+                left: 3%;
+            }
+            .end-route img {
+                width: 3.5vh;
+                height: 3.5vh;
+                position: relative;
+                top: 0.16vh;
+            }
         </style>
         <link src="./marker.html" id="marker">
         <div id="map">
-            <div class="map-overlay">
+            <div class="map-overlay" id="map-overlay">
                 <button class="explore" id="explore">Explorer</button>
                 <button class="aller" id="aller">Aller</button>
                 <div class="map-overlay-inner" id="map-overlay-inner">
@@ -262,7 +288,11 @@
                     <button class="go" id="go">Go</button>
                 </div>
             </div>
-            
+            <div class="route-overlay" id="route-overlay" top>
+                <button class="end-route" id="end-route">
+                    <img src="icon/icons8-effacer-100.png">
+                </button>
+            </div>
         </div>
         <script>
             // INTERFACE CONTROL
@@ -359,11 +389,12 @@
                                     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                                 }
 
+                                
                                 new mapboxgl.Popup()
                                     .setLngLat(coordinates)
                                     .setHTML(`<h3>${e.features[0].properties.title}</h3><p>${description}</p>`)
                                     .addTo(map)
-
+                                
 
                                 //Trajet + localisation utilisateur
 
@@ -388,10 +419,15 @@
             
             const userLocation = document.getElementById("get-location")
             const depart = document.getElementById("start")
+
+            function isElementDisplay(element) {
+                const computedStyle = window.getComputedStyle(element)
+                return computedStyle.display !== 'none'
+            }
+
             userLocation.addEventListener("click", () => {
                 const watchID = navigator.geolocation.watchPosition((position) => {
                     startCoordinates = [position.coords.longitude, position.coords.latitude]
-                    console.log(startCoordinates)
                     depart.value = "Position utilisateur"
                 })
             })
@@ -408,6 +444,12 @@
                     map.removeLayer('route')
                     map.removeSource('route')
                 }
+                //ui gestion pour la navigation
+                const ui = document.getElementById("map-overlay")
+                const info = document.getElementById("route-overlay")
+                ui.style.display = "none"
+                info.style.display = "block"
+
                 try {
                     const start = startCoordinates
                     const end = endCoordinates
@@ -442,7 +484,27 @@
                     console.error(error)
                 }
             }
-            document.getElementById('go').addEventListener('click', showRoute)
+            
+            document.getElementById('go').addEventListener('click', () => {
+                if (endCoordinates !== null && startCoordinates !== null){
+                    showRoute()
+                }
+            })
+            document.getElementById("end-route").addEventListener('click', () => {
+                map.removeLayer('route')
+                map.removeSource('route')
+                const ui = document.getElementById("map-overlay")
+                const info = document.getElementById("route-overlay")
+                info.style.display = "none"
+                ui.style.display = "block"
+
+                map.flyTo({
+                    center: [5, 45],
+                    zoom: 4,
+                    duration: 5000,
+                    essential: true
+                })
+            })
             
             
             //fonction rechercher
