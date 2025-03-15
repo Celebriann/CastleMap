@@ -19,6 +19,7 @@
             }
         </style>
         <script>
+            /***
             function isMobileDevice() {
                 return /Mobi|Android/i.test(navigator.userAgent);
             }
@@ -27,6 +28,7 @@
             if (isMobileDevice()) {
                 window.location.href = "../CastleMap/mobile/index-s.html"; // Remplacez par l'URL de votre site mobile
             }
+                ***/
         </script>
     </head>
     <body>
@@ -112,6 +114,42 @@
                 left: -29%;
                 color: white;
             }
+            /* NAVIGATION BOX */
+
+            .navigation-overlay {
+                font: 12px/20px Arial, Helvetica, sans-serif;
+                position: absolute;
+                width: 250px;
+                height: 120px;
+                top: 210px;
+                left: 0;
+                padding: 10px;
+                z-index: 1;
+            }
+            .navigation-overlay .navigation-overlay-inner {
+                background-color: rgba(61, 61, 61, 0.5);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                height: 155px;
+                border-radius: 10px;
+                margin-bottom: 5px;
+            }
+            .navigation-overlay-inner input {
+                width: 80%;
+                height: 25px;
+                position: relative;
+                top: 10px;
+                left: 10%;
+                border: none;
+                outline: none;
+            }
+            .start {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            .end {
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
             .iti {
                 width: 50%;
                 height: 30px;
@@ -120,10 +158,37 @@
                 border-radius: 15px;
                 position: relative;
                 top: 15px;
-                left: 25%;
+                left: 35%;
             }
-            .iti:hover {
+            button:hover {
                 filter: grayscale(30%);
+            }
+            .get-location {
+                width: 2.4vh;
+                height: 2.4vh;
+                background-color: rgb(23, 138, 113);
+                border: 0px;
+                border-radius: 1.2vh;
+                position: relative;
+                top: 20px;
+                left: -90px;
+                padding: 0;
+            }
+            .get-location img {
+                width: 1.8vh;
+                height: 1.8vh;
+                position: relative;
+                top: 2px;
+            }
+            .go {
+                width: 80%;
+                height: 30px;
+                background-color: rgb(10, 121, 97);
+                border: 0px;
+                border-radius: 15px;
+                position: relative;
+                top: 25px;
+                left: 10%;
             }
         </style>
         <link src="./marker.html" id="marker">
@@ -132,7 +197,6 @@
                 <div class="map-overlay-inner">
                     <fieldset>
                         <input type="text" placeholder=" Rechercher" name="search" id="search" />
-                        <!---<button class="iti" id="iti">itinéraire</button>--->
                         <label>Pays</label>
                         <select name="pays" id="pays">
                             <option value="france">france</option>
@@ -147,6 +211,18 @@
                         <a href="https://celebrian.notion.site/1b3101dabb1c803db938e80e0543d0ce?pvs=105" id="bug">Signaler un bug</a>
                     </fieldset>
                     <div class="more"></div>
+                </div>
+            </div>
+            <div class="navigation-overlay">
+                <div class="navigation-overlay-inner">
+                    <input type="input" id="start" class="start" placeholder=" départ" />
+                    <input type="input" id="end" class="end" placeholder=" arrivée" />
+                    
+                    <button class="iti" id="iti">Itinéraire</button>
+                    <button class="get-location" id="get-location">
+                        <img src="icon/icons8-marqueur-100.png">
+                    </button>
+                    <button class="go" id="go">Go</button>
                 </div>
             </div>
         </div>
@@ -168,10 +244,10 @@
                     enableHighAccuracy: true
                 },
                 trackUserLocation: true,
-                showUserLocation: true,
                 showUserHeading: true
-            })) //localiser l'utilisateur
-            
+            }));
+            var startCoordinates = null
+            var endCoordinates = null
             import geojson from './geojson.json' with {type: 'json'} //import les données des chateaux (coordonnées, nom, description)
 
             var a = 0
@@ -235,8 +311,25 @@
                                     .setLngLat(coordinates)
                                     .setHTML(`<h3>${e.features[0].properties.title}</h3><p>${description}</p>`)
                                     .addTo(map)
+
+
+
+                                //Trajet + localisation utilisateur
+
+                                const itinéraire = document.getElementById("iti")
+                                const destination = document.getElementById("end")
+                                
+                                
+
+                                itinéraire.addEventListener("click", () => {
+                                    destination.value = title
+                                    endCoordinates = coordinates
+                                })
+                                
+                                
                             }
                         })
+                        
                         
 
                     })
@@ -244,8 +337,62 @@
                 .catch(error => {
                     console.log("error")
                 })
-            
-            
+            const userLocation = document.getElementById("get-location")
+            const depart = document.getElementById("start")
+            userLocation.addEventListener("click", () => {
+                const watchID = navigator.geolocation.watchPosition((position) => {
+                    startCoordinates = [position.coords.longitude, position.coords.latitude]
+                    console.log(startCoordinates)
+                    depart.value = "Position utilisateur"
+                })
+            })
+
+            async function getRoute(start, end) {
+                const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${start};${end}?geometries=geojson&access_token=pk.eyJ1IjoicmFpdG92aW4iLCJhIjoiY2w2YjQyZzZxMWEyMzNpbzE4ZDBtMG45biJ9.bRYg8AO7oKpfwSG_WGdwwA`;
+                const response =  await fetch(url)
+                const data = await response.json()
+                return data.routes[0].geometry.coordinates
+            }
+            async function showRoute() {
+                if (map.getSource('route')){
+                    map.removeLayer('route')
+                    map.removeSource('route')
+                }
+                try {
+                    const start = startCoordinates
+                    const end = endCoordinates
+
+                    const route = await getRoute(start, end)
+
+                    map.addSource('route', {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'Feature',
+                            'properties': {},
+                            'geometry': {
+                                'type': 'LineString',
+                                'coordinates': route
+                            }
+                        }
+                    })
+                    map.addLayer({
+                        'id': 'route',
+                        'type': 'line',
+                        'source': 'route',
+                        'layout': {
+                            'line-join': 'round',
+                            'line-cap': 'round'
+                        },
+                        'paint': {
+                            'line-color': '#888',
+                            'line-width': 8
+                        }
+                    })
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+            document.getElementById('go').addEventListener('click', showRoute)
             //fonction rechercher
             const searchbar = document.getElementById("search")
                     searchbar.addEventListener("keydown", (event) => {
@@ -348,46 +495,8 @@
                 console.warn(`ERROR(${err.code}): ${err.message}`)
             }
 
-            /***document.getElementById('iti').addEventListener('click', () => {
-                
-                const fromLocation = navigator.geolocation.getCurrentPosition(success, error)
-                const toWayPoint = targetCoo
+            
 
-                let routeData
-                let routeStepsData
-                let instructionsData
-                let stepPointsData
-
-                fetch(`https://api.geoapify.com/v1/routing?waypoints=lonlat:${fromWaypoint.join(",")}|lonlat:${toWaypoint.join(",")}&mode=hike&details=route_details,elevation&apiKey=${myAPIKey}`).then(res => res.json()).then(routeResult => {
-                    routeData = routeResult
-
-                })
-            })***/
-
-            function updateRoute(routeJSON, updateLayers){
-                if (map.getSource('trajet')){
-                    map.getSource('trajet').setData(geoJSONData)
-                } else {
-                    map.addSource("trajet", {
-                        "type": "geojson",
-                        "data": geoJSONData
-                    })
-                }
-                if (map.getLayer('trajet') || updateLayers){
-                    if (map.getLayer('trajet')){
-                        map.removeLayer('trajet')
-                    }
-                    map.addLayer({
-                        id: 'trajet',
-                        source: 'trajet',
-                        type: 'line',
-                        paint: {
-                            'line-color': "#05a484",
-                            'line-width': 8
-                        }
-                    })
-                }
-            }
         </script>
     </body>
 </html>
