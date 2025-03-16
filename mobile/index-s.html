@@ -330,7 +330,7 @@
             map.addControl(geolocate)
             var startCoordinates = null
             var endCoordinates = null
-            import geojson from './geojson.json' with {type: 'json'} //import les données des chateaux (coordonnées, nom, description)
+            //import geojson from './geojson.json' with {type: 'json'} //import les données des chateaux (coordonnées, nom, description)
 
             var a = 0
             
@@ -508,9 +508,8 @@
             
             
             //fonction rechercher
-            const searchbar = document.getElementById("search")
-                    document.getElementById('rechercher').addEventListener("click", () => {
-                        for (const feature of geojson.features){
+            function research() {
+                for (const feature of geojson.features){
                             var recherche = searchbar.value
                             
                             if (recherche.endsWith(' ')) {
@@ -532,7 +531,10 @@
                                 break;
                             }
                         }
-                    })
+            }
+
+            const searchbar = document.getElementById("search")
+            document.getElementById('rechercher').addEventListener("click", research)
             
             
             //pour sélectionner une région précise
