@@ -9296,6 +9296,146 @@
         "title": "Château de la Voulte-sur-Rhône",
         "description": "Description du Château de la Voulte-sur-Rhône..."
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.981388888888889,
+          49.67361111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de Bazeilles(Château d'Orival)",
+        "description": "Description du Château de Bazeilles(Château d'Orival)..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.902777777777779,
+          49.69694444444444
+        ]
+      },
+      "properties": {
+        "title": "Château de Bellevue",
+        "description": "Description du Château de Bellevue..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.85361111111111,
+          49.47638888888889
+        ]
+      },
+      "properties": {
+        "title": "Château-ferme de Brieulles-sur-Bar",
+        "description": "Description du Château-ferme de Brieulles-sur-Bar..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.815833333333333,
+          49.58166666666667
+        ]
+      },
+      "properties": {
+        "title": "Château de la Cassine",
+        "description": "Description du Château de la Cassine..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.808333333333334,
+          50.135
+        ]
+      },
+      "properties": {
+        "title": "Fort de Charlemont",
+        "description": "Description du Fort de Charlemont..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.956111111111111,
+          49.28611111111111
+        ]
+      },
+      "properties": {
+        "title": "Château de Châtel",
+        "description": "Description du Château de Châtel..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.703888888888889,
+          49.993611111111115
+        ]
+      },
+      "properties": {
+        "title": "Château des comtes de Bryas",
+        "description": "Description du Château des comtes de Bryas..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.948888888888889,
+          49.30277777777778
+        ]
+      },
+      "properties": {
+        "title": "Château de Cornay",
+        "description": "Description du Château de Cornay..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.270277777777777,
+          49.80777777777777
+        ]
+      },
+      "properties": {
+        "title": "Château de la Cour des Prés",
+        "description": "Description du Château de la Cour des Prés..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.305555555555555,
+          49.63
+        ]
+      },
+      "properties": {
+        "title": "Château de Doumely",
+        "description": "Description du Château de Doumely..."
+      }
     }
   ]
 }
