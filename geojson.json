@@ -9436,6 +9436,79 @@
         "title": "Château de Doumely",
         "description": "Description du Château de Doumely..."
       }
+    },
+    {
+      "description": "Starting japan castles here"
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.9297222222222,
+          37.4877778
+        ]
+      },
+      "properties": {
+        "title": "château d'Aizuwakamatsu (会津若松城)",
+        "description": "Description du Château d'Aizuwakamatsu..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.99166666666665,
+          34.6525
+        ]
+      },
+      "properties": {
+        "title": "château d'Akashi (会津若松城)",
+        "description": "Description du Château d'Akashi..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.38888888888889,
+          34.7455556
+        ]
+      },
+      "properties": {
+        "title": "château d'Akō (赤穂城)",
+        "description": "Description du Château d'Akō..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.24916666666667,
+          32.0033333
+        ]
+      },
+      "properties": {
+        "title": "château d'Aya (綾城)",
+        "description": "Description du Château d'Aya..."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.13944444444445,
+          35.1561111
+        ]
+      },
+      "properties": {
+        "title": "château d'Azuchi (安土城)",
+        "description": "Description du Château d'Azuchi..."
+      }
     }
   ]
 }
