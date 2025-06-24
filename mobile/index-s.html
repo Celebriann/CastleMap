@@ -46,7 +46,7 @@
                 font: 12px/20px Arial, Helvetica, sans-serif;
                 position: fixed;
                 width: 97%;
-                height: 39vh;
+                height: 45vh;
                 bottom: 0;
                 left: 0;
                 padding: 0.79vh;
@@ -54,15 +54,14 @@
                 font-size: 2.36vh;
             }
             .map-overlay .map-overlay-inner {
-                background-color: rgba(61, 61, 61, 0.5);
+                background-color: rgba(61, 61, 61, 0.95);
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-                height: 39vh;
+                height: 27vh;
                 margin-bottom: 0.39vh;
                 display: block;
-
-                border-top-right-radius: 1.57vh;
-                border-bottom-right-radius: 1.57vh;
-                border-bottom-left-radius: 1.57vh;
+                position: relative;
+                top: 10vh;
+                border-radius: 1.57vh;
             }
             .map-overlay-inner fieldset {
                 border: none;
@@ -83,16 +82,6 @@
             option {
                 font-size: 1.18vh;
             }
-            .map-overlay-inner label {
-                display: block;
-                font-weight: bold;
-                margin: 0 0 0.39vh;
-                color: white;
-                position: relative;
-                top: 5.51vh;
-                left: 5%;
-                margin-bottom: 5%;
-            }
             .map-overlay-inner input {
                 width: 90%;
                 height: 5.51vh;
@@ -107,7 +96,7 @@
             .search {
                 position: absolute;
                 right: 4vh;
-                top: 14.5%;
+                top: 6%;
                 height: 5.51vh;
                 background-color: rgba(0, 0, 0, 0.0);
                 border: 0vh;
@@ -130,6 +119,32 @@
                 left: 10%;
                 color: white;
             }
+            .pays{
+                position: relative;
+                top: 3.93vh;
+                left: 5%;
+                font-size: 2.75vh;
+                color: white;
+            }
+            .region {
+                position: relative;
+                top: 12.93vh;
+                right: 64%;
+                font-size: 2.75vh;
+                color: white;
+            }
+            #pays {
+                border-radius: 20px;
+                outline: none;
+            }
+            
+            #regions {
+                border-radius: 20px;
+                outline: none;
+                position: relative;
+                top: 8.3vh;
+                left: 31.5%;
+            }
             
             button:hover {
                 filter: grayscale(30%);
@@ -138,12 +153,10 @@
 
             .map-overlay .navigation-overlay-inner {
                 display: none;
-                background-color: rgba(61, 61, 61, 0.5);
+                background-color: rgba(61, 61, 61, 0.95);
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-                height: 39vh;
-                border-top-right-radius: 1.57vh;
-                border-bottom-right-radius: 1.57vh;
-                border-bottom-left-radius: 1.57vh;
+                height: 37vh;
+                border-radius: 1.57vh;
                 margin-bottom: 0.39vh;   
             }
             .navigation-overlay-inner input {
@@ -206,23 +219,38 @@
 
             .explore {
                 width: 20%;
-                height: 3.2vh;
-                background-color: rgba(61, 61, 61, 0.5);
+                height: 6vh;
+                background-color: rgba(61, 61, 61, 0.95);
                 border: 0;
-                border-top-left-radius: 1.6vh;
-                position: relative;
+                border-radius: 1.6vh;
+                position: absolute;
+                top: 39vh;
                 font-size: 1.8vh;
                 text-align: center;
                 color: white;
             }
             .aller {
                 width: 20%;
-                height: 3.2vh;
-                background-color: rgba(61, 61, 61, 0.5);
+                height: 6vh;
+                background-color: rgba(61, 61, 61, 0.95);
                 border: 0;
-                border-top-right-radius: 1.6vh;
-                position: relative;
-                left: -1.5%;
+                border-radius: 1.6vh;
+                position: absolute;
+                top: 39vh;
+                left: 23%;
+                font-size: 1.8vh;
+                text-align: center;
+                color: white;
+            }
+            .info {
+                width: 20%;
+                height: 6vh;
+                background-color: rgba(61, 61, 61, 0.95);
+                border: 0;
+                border-radius: 1.6vh;
+                position: absolute;
+                top: 39vh;
+                left: 44.25%;
                 font-size: 1.8vh;
                 text-align: center;
                 color: white;
@@ -253,30 +281,63 @@
                 position: relative;
                 top: 0.16vh;
             }
+            .mapboxgl-ctrl-bottom-left {
+                left: -5.5%;
+                right: 0;
+                top: 0;
+                bottom: auto;
+            }
+            .mapboxgl-ctrl-logo {
+                transform: scale(0.5);
+                transform-origin: bottom;
+            }
+            .mapbox-ctrl-attrib {
+                font-size: 10px;
+            }
+
+            .map-overlay .info-overlay-inner {
+                display: none;
+                background-color: rgba(61, 61, 61, 0.95);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                height: 17vh;
+                position: relative;
+                top: 20vh;
+                border-radius: 1.57vh;
+                margin-bottom: 0.39vh;   
+            }
+            
+            .info-overlay-inner label {
+                display: block;
+                font-weight: bold;
+                margin: 0 0 0.39vh;
+                color: white;
+                position: relative;
+                top: 2.51vh;
+                left: 5%;
+                margin-bottom: 15%;
+            }
         </style>
         <link src="./marker.html" id="marker">
         <div id="map">
             <div class="map-overlay" id="map-overlay">
                 <button class="explore" id="explore">Explorer</button>
                 <button class="aller" id="aller">Aller</button>
+                <button class="info" id="info">Info</button>
                 <div class="map-overlay-inner" id="map-overlay-inner">
                     <fieldset>
                         <input type="text" placeholder=" Nom" name="search" id="search" />
                         <button class="search" id="rechercher">Rechercher</button>
                         <!---<button class="iti" id="iti">itinéraire</button>--->
-                        <label class="pays">Pays</label>
+                        <label class="pays">Pays: </label>
                         <select name="pays" id="pays">
                             <option value="france">France</option>
                             <option value="uk">United Kingdom</option>
                             <option value="jp">Japan</option>
                         </select>
-                        <label class="region">Régions</label>
+                        <label class="region">Régions: </label>
                         <select name="regions" id="regions">
                             <option value="default">---</option>
                         </select>
-                        <label id="r_cas" name="r_cas"></label>
-                        <a href="https://celebrian.notion.site/1b3101dabb1c80e4b639d7a7c59c22a2?pvs=105" id="link">Une suggestion ? </a>
-                        <a href="https://celebrian.notion.site/1b3101dabb1c803db938e80e0543d0ce?pvs=105" id="bug">Signaler un bug</a>
                     </fieldset>
                     <div class="more"></div>
                 </div>
@@ -290,6 +351,11 @@
                     </button>
                     <button class="go" id="go">Go</button>
                 </div>
+                <div class="info-overlay-inner" id="info-overlay-inner">
+                    <label id="r_cas" name="r_cas"></label>
+                    <a href="https://celebrian.notion.site/1b3101dabb1c80e4b639d7a7c59c22a2?pvs=105" id="link">Une suggestion ? </a>
+                    <a href="https://celebrian.notion.site/1b3101dabb1c803db938e80e0543d0ce?pvs=105" id="bug">Signaler un bug</a>
+                </div>    
             </div>
             <div class="route-overlay" id="route-overlay" top>
                 <button class="end-route" id="end-route">
@@ -301,13 +367,21 @@
             // INTERFACE CONTROL
             document.getElementById('explore').addEventListener('click', () => {
                 document.getElementById("navigation-overlay-inner").style.display = "none"
+                document.getElementById("info-overlay-inner").style.display = "none"
                 document.getElementById("map-overlay-inner").style.display = "block"
                 console.log("Affiche le menu explorer")
             })
             document.getElementById('aller').addEventListener('click', () => {
                 document.getElementById("map-overlay-inner").style.display = "none"
+                document.getElementById("info-overlay-inner").style.display = "none"
                 document.getElementById("navigation-overlay-inner").style.display = "block"
                 console.log("Affiche le menu Aller")
+            })
+            document.getElementById('info').addEventListener('click', () => {
+                document.getElementById("map-overlay-inner").style.display = "none"
+                document.getElementById("navigation-overlay-inner").style.display = "none"
+                document.getElementById("info-overlay-inner").style.display = "block"
+                console.log("Affiche le menu Info")
             })
         </script>
 
